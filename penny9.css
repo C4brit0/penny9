@@ -1,0 +1,464 @@
+/* === Corpo principal da página === */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === Container principal do layout === */
+#wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: #0a0a0a;
+}
+
+/* === Cabeçalho e barra superior === */
+.navbar {
+  background-color: #1c1c1c;
+  border-bottom: 1px solid #333;
+  padding: 8px 16px;
+  color: #ccc;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 5px #7b00ff;
+}
+
+/* === Botões principais === */
+.btn {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #7b00ff;
+  border-color: #7b00ff;
+  color: #fff;
+}
+
+/* === Rodapé === */
+#sitefooter,
+#footer {
+  background: #1c1c1c;
+  border-top: 1px solid #333;
+  padding: 5px 10px;
+  color: #aaa;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* === Seções de conteúdo === */
+#leftcontent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#rightcontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d0d0d;
+  border-left: 1px solid #2b2b2b;
+}
+
+/* === Área do vídeo === */
+#video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(123, 0, 255, 0.2);
+}
+
+#videowrap {
+  width: 100%;
+  background-color: #000;
+}
+
+/* === Título do vídeo === */
+#currenttitlewrap {
+  padding: 10px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #2b2b2b;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* === Caixa de anúncios, MOTD, etc === */
+#motdrow,
+#announcements,
+#drinkbar {
+  background-color: #111;
+  border: 1px solid #2b2b2b;
+  border-radius: 6px;
+  padding: 8px;
+  color: #aaa;
+}
+
+/* === Playlist === */
+#playlistrow {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 5px;
+  color: #ccc;
+}
+
+/* === Barra de controles de mídia === */
+#controlsrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #141414;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #2a2a2a;
+}
+
+/* === Créditos de tema === */
+.credit {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.credit a {
+  color: #7b00ff;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
+
+/* === Área do chat === */
+#chatwrap {
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0a;
+  border-top: 1px solid #222;
+  height: 100%;
+}
+
+/* === Buffer de mensagens === */
+#messagebuffer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+  color: #ccc;
+}
+
+/* === Estilo das mensagens === */
+.chat-msg- {
+  display: block;
+  padding: 4px 6px;
+  border-bottom: 1px solid #151515;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chat-msg-:hover {
+  background-color: #1c1c1c;
+}
+
+.timestamp {
+  color: #555;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+/* === Campo de envio de mensagem === */
+#chatline {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #eee;
+  padding: 6px 8px;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#chatline:focus {
+  outline: none;
+  border-color: #7b00ff;
+}
+
+/* === Botão de envio === */
+#chatbtn {
+  background-color: #7b00ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin-left: 6px;
+}
+
+#chatbtn:hover {
+  background-color: #8b2bff;
+}
+
+/* === Lista de usuários (userlist) === */
+#userlist {
+  background-color: #0c0c0c;
+  border-left: 1px solid #222;
+  overflow-y: auto;
+  padding: 10px;
+  color: #ccc;
+}
+
+.userlist_item {
+  padding: 4px 0;
+  border-bottom: 1px solid #1a1a1a;
+  cursor: pointer;
+}
+
+.userlist_item:hover {
+  background-color: #1a1a1a;
+}
+
+/* === Estilo de usuários com status === */
+.userlist_afk {
+  color: #888 !important;
+  font-style: italic;
+}
+
+.userlist_owner {
+  color: #7b00ff !important;
+  font-weight: bold;
+}
+
+/* === Barra de rolagem personalizada === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7b00ff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8b2bff;
+}
+
+/* === Caixa de controles à direita === */
+#rightcontrols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #141414;
+  border-top: 1px solid #2b2b2b;
+  padding: 5px 10px;
+}
+
+/* === Botões de controle menores === */
+.btn-sm {
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+/* === Botão “AFK” e “Clear” personalizados === */
+#afk-btn,
+#clear-btn {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #ccc;
+}
+
+#afk-btn:hover,
+#clear-btn:hover {
+  background-color: #7b00ff;
+  border-color: #7b00ff;
+  color: #fff;
+}
+
+/* === Créditos menores no rodapé === */
+.credit p {
+  margin: 0;
+  padding: 5px;
+}
+
+/* === Painel de emotes (flutuante ou fixo) === */
+#emotewrap {
+  position: absolute;
+  z-index: 99;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+#emotespanel {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 220px;
+  gap: 5px;
+}
+
+#emotespanel img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+#emotespanel img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 8px #7b00ff;
+}
+
+/* === Botão para abrir o painel de emotes === */
+#emotes-btn {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 5px 8px;
+  margin-right: 6px;
+}
+
+#emotes-btn:hover {
+  background-color: #7b00ff;
+  border-color: #7b00ff;
+  color: #fff;
+}
+
+/* === Botão “Switch EP” no menu === */
+.navbar-nav li a {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav li a:hover {
+  color: #fff;
+}
+
+/* === Caixa de resposta (reply) no chat === */
+.reply {
+  margin-top: 3px;
+  padding: 4px 6px;
+  background: #141414;
+  border-left: 3px solid #7b00ff;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.reply:hover {
+  background: #1c1c1c;
+}
+
+/* === Cabeçalho e conteúdo da resposta === */
+.reply-header {
+  display: block;
+  font-weight: bold;
+  color: #7b00ff;
+}
+
+.reply-msg {
+  color: #ccc;
+  display: block;
+  margin-top: 2px;
+}
+
+/* === Botão de resposta (ícone no chat) === */
+.reply-button {
+  background: transparent;
+  border: none;
+  color: #7b00ff;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: transform 0.1s;
+}
+
+.reply-button:hover {
+  transform: scale(1.2);
+}
+
+/* === Ícone de resposta simples === */
+.reply-icon::before {
+  content: "↩";
+  font-size: 14px;
+}
+
+/* === Botão “Scroll to current item” === */
+#jump-btn {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#jump-btn:hover {
+  background-color: #7b00ff;
+  border-color: #7b00ff;
+  color: #fff;
+}
+
+/* === Título do vídeo atual === */
+#currenttitlewrap {
+  text-align: center;
+  padding: 8px;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+#currenttitle {
+  color: #eee;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* === Animação leve de destaque === */
+@keyframes highlightFade {
+  from {
+    background-color: #7b00ff33;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.chat-msg-highlight {
+  animation: highlightFade 0.6s ease-in-out;
+}
+
+/* === Créditos e rodapé === */
+.credit {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.credit a {
+  color: #7b00ff;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
