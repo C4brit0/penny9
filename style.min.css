@@ -815,52 +815,81 @@ textarea.form-control {
 }
 
 /* =============================================
-   JANELAS DE MENSAGEM PRIVADA (PM) - PERSONALIZAÇÃO
+   JANELAS DE MENSAGEM PRIVADA - PENNY9SQUAD
    ============================================= */
 
-/* Janela de PM normal - ADICIONE ESTAS NOVAS CLASSES */
-.pm-wrap.custom-pm {
-    background-color: #2d2d2d !important;
-    border: 1px solid #444 !important;
-    border-radius: 8px !important;
-}
-
-/* Cabeçalho da janela de PM */
-.pm-header.custom-pm-header {
-    background-color: #1a1a1a !important;
+/* CABEÇALHO DA PM - COR #aa53eb */
+.pm-header {
+    background-color: #aa53eb !important;
     color: #ffffff !important;
-    border-bottom: 1px solid #444 !important;
+    border-bottom: 2px solid #8a3bc9 !important;
+    font-weight: bold !important;
 }
 
-/* Área de mensagens do PM - MANTENHA O EXISTENTE E ADICIONE */
-.pm-history-content.custom-pm-messages {
-    background-color: #2d2d2d !important;
+/* FUNDO DA JANELA DE PM */
+.pm-wrap {
+    background-color: #2a1a2e !important;
+    border: 2px solid #aa53eb !important;
+    border-radius: 10px !important;
+}
+
+/* ÁREA DE MENSAGENS */
+.pm-history-content {
+    background-color: #1a0a1e !important;
     color: #ffffff !important;
 }
 
-/* Campo de digitação do PM */
-.pm-input.custom-pm-input {
-    background-color: #1a1a1a !important;
+/* CAMPO DE DIGITAÇÃO */
+.pm-input {
+    background-color: #2a1a2e !important;
     color: #ffffff !important;
-    border: 1px solid #444 !important;
+    border: 1px solid #aa53eb !important;
 }
 
-/* PM com nova mensagem (alerta) */
-.pm-wrap.custom-pm.highlight {
-    background-color: #3a2e2e !important;
-    border: 2px solid #ff4444 !important;
-    animation: pmPulse 1s infinite !important;
+/* =============================================
+   NOVA MENSAGEM - COR #ff6600
+   ============================================= */
+
+/* PM COM NOVA MENSAGEM - DESTAQUE LARANJA */
+.pm-wrap.blink {
+    background-color: #3a1a0e !important;
+    border: 3px solid #ff6600 !important;
+    animation: pennyPulse 1.5s infinite !important;
 }
 
-.pm-header.custom-pm-header.highlight {
-    background-color: #5a2e2e !important;
-    color: #ff8888 !important;
+/* CABEÇALHO COM ALERTA DE NOVA MENSAGEM */
+.pm-header.blink {
+    background-color: #ff6600 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
 }
 
-@keyframes pmPulse {
-    0% { border-color: #ff4444; }
-    50% { border-color: #ff8888; }
-    100% { border-color: #ff4444; }
+/* ANIMAÇÃO DE PULSO PARA NOVAS MENSAGENS */
+@keyframes pennyPulse {
+    0% { 
+        border-color: #ff6600;
+        box-shadow: 0 0 5px #ff6600;
+    }
+    50% { 
+        border-color: #ff9933;
+        box-shadow: 0 0 15px #ff9933;
+    }
+    100% { 
+        border-color: #ff6600;
+        box-shadow: 0 0 5px #ff6600;
+    }
+}
+
+/* BOTÃO DE FECHAR PERSONALIZADO */
+.pm-close {
+    background-color: #ff6600 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border-radius: 50% !important;
+}
+
+.pm-close:hover {
+    background-color: #ff9933 !important;
 }
 
 /* =============================================
