@@ -815,6 +815,55 @@ textarea.form-control {
 }
 
 /* =============================================
+   JANELAS DE MENSAGEM PRIVADA (PM) - PERSONALIZAÇÃO
+   ============================================= */
+
+/* Janela de PM normal - ADICIONE ESTAS NOVAS CLASSES */
+.pm-wrap.custom-pm {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444 !important;
+    border-radius: 8px !important;
+}
+
+/* Cabeçalho da janela de PM */
+.pm-header.custom-pm-header {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+/* Área de mensagens do PM - MANTENHA O EXISTENTE E ADICIONE */
+.pm-history-content.custom-pm-messages {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+/* Campo de digitação do PM */
+.pm-input.custom-pm-input {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+/* PM com nova mensagem (alerta) */
+.pm-wrap.custom-pm.highlight {
+    background-color: #3a2e2e !important;
+    border: 2px solid #ff4444 !important;
+    animation: pmPulse 1s infinite !important;
+}
+
+.pm-header.custom-pm-header.highlight {
+    background-color: #5a2e2e !important;
+    color: #ff8888 !important;
+}
+
+@keyframes pmPulse {
+    0% { border-color: #ff4444; }
+    50% { border-color: #ff8888; }
+    100% { border-color: #ff4444; }
+}
+
+/* =============================================
    RESPONSIVIDADE - TABLETS
    ============================================= */
 
